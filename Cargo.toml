@@ -1,7 +1,7 @@
 [package]
 name = "token-enforcer-rs"
 authors = ["Hamza El Marjani <hamzaelmarjani@gmail.com>"]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Per-tenant LLM token budget enforcement library for Rust apps"
 license = "MIT"

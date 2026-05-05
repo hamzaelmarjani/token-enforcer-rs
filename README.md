@@ -117,5 +117,45 @@ The library uses the following key structure in Redis:
 ## Note
 This library manages token counting and enforcement logic. It does **not** manage your users/tenants database or provide an HTTP server.
 
+## Testing
+
+To run the integration tests for this library, you need a running Redis instance.
+
+### 1. Install Redis (if not already installed)
+
+- **macOS (Homebrew):**
+  ```bash
+  brew install redis
+  ```
+- **Ubuntu/Debian:**
+  ```bash
+  sudo apt update
+  sudo apt install redis-server
+  ```
+- **Windows:**
+  Follow the [official guide](https://redis.io/docs/getting-started/installation/install-redis-on-windows/) or use WSL2.
+
+### 2. Start Redis Server
+
+Run the following command in your terminal:
+
+```bash
+redis-server
+```
+
+### 3. Run the Tests
+
+Once Redis is running, you can execute the library's test suite:
+
+```bash
+# Run unit tests
+cargo test
+
+# Run integration tests (requires Redis)
+cargo test --test integration
+```
+
+If everything is set up correctly, you should see all tests passing.
+
 ## License
 MIT
